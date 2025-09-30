@@ -1,6 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import { Me } from "@3d/characters";
+import DetailLighting from "./Lighting";
 
 export default function HomeScence() {
   return (
@@ -9,7 +10,7 @@ export default function HomeScence() {
         <Me scale={1} position={[0, -1.7, 1.0]} rotation={[0, 0.4, 0]} />
 
         {/* Lights */}
-        <ambientLight intensity={2} />
+        <DetailLighting />
       </Suspense>
     </Canvas>
   );
