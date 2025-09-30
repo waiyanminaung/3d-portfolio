@@ -1,5 +1,11 @@
 import { HomeScence } from "@/components/3d/scence";
 
 export default function HomeLayout() {
-  return <HomeScence />;
+  return (
+    <>
+      <HomeScence />
+
+      {/* <div className="grid"></div> */}
+    </>
+  );
 }
