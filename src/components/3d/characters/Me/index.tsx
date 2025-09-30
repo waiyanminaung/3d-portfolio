@@ -22,7 +22,6 @@ export default function Me(props: JSX.IntrinsicElements["group"]) {
         geometry={(nodes.avaturn_body as SkinnedMesh).geometry}
         material={materials.avaturn_body_material}
         skeleton={(nodes.avaturn_body as SkinnedMesh).skeleton}
-        frustumCulled={false}
       />
     </group>
   );
