@@ -3,9 +3,9 @@ import { HomeScence } from "@/components/3d/scence";
 export default function HomeLayout() {
   return (
     <>
-      <div className="flex container mx-auto fixed top-12 justify-between left-0 right-0 z-10">
+      <div className="grid grid-cols-[20%_1fr_20%] container mx-auto fixed top-12 justify-between left-0 right-0 z-10">
         <div className="text-white font-bold text-lg">Wai Yan Min Aung</div>
-        <div className="flex gap-16 text-sm">
+        <div className="flex gap-16 text-sm justify-center">
           <a href="" className="text-white font-light">
             About
           </a>
@@ -16,9 +16,11 @@ export default function HomeLayout() {
             Projects
           </a>
         </div>
-        <button className="border  border-white px-5 py-2.5 text-sm rounded text-white hover:bg-white hover:text-black transition cursor-pointer">
-          Download Resume
-        </button>
+        <div className="flex">
+          <button className="border  border-white px-5 py-2.5 text-sm rounded text-white hover:bg-white hover:text-black transition cursor-pointer ms-auto">
+            Download Resume
+          </button>
+        </div>
       </div>
 
       <div className="h-screen bg-gradient-to-r from-[#282727]  to-[#0C0C0E]">
