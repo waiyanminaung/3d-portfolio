@@ -18,8 +18,6 @@ export default function Me(props: JSX.IntrinsicElements["group"]) {
     true
   );
 
-  // const [texture] = useTexture();
-
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes, materials } = useGraph(clone);
   const { actions } = useAnimations(animations, group);
