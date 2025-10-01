@@ -42,23 +42,21 @@ export default function HomeLayout() {
             </p>
           </div>
           <div className="h-0" />
-          <div className="flex">
-            <div className="text-start ms-auto">
-              <div className="flex gap-2 items-center">
-                <span className="inline-block size-3 bg-[#18FF97] rounded-full" />
-                <span className="text-sm font-light">Available</span>
-              </div>
-              <div className="mt-2">
-                <a
-                  href="mailto:info.wyma@gmail.com"
-                  className="text-lg underline font-medium"
-                >
-                  info.wyma@gmail.com
-                </a>
-              </div>
-              <div className="mt-1">
-                <a href="">LinkedIn</a>, <a href="">GitHub</a>
-              </div>
+          <div className="text-start pl-[25%]">
+            <div className="flex gap-2 items-center">
+              <span className="inline-block size-3 bg-[#18FF97] rounded-full" />
+              <span className="text-sm font-light">Available</span>
+            </div>
+            <div className="mt-2">
+              <a
+                href="mailto:info.wyma@gmail.com"
+                className="text-lg underline font-medium"
+              >
+                info.wyma@gmail.com
+              </a>
+            </div>
+            <div className="mt-1">
+              <a href="">LinkedIn</a>, <a href="">GitHub</a>
             </div>
           </div>
         </div>
