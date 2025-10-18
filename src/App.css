@@ -4,3 +4,7 @@
 @theme {
   --font-display: "Inter", sans-serif;
 }
+
+body {
+  background: linear-gradient(to right, #282727, #0c0c0e);
+}

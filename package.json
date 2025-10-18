@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "generate-routes": "tsr generate",
+    "watch-routes": "tsr watch",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -13,6 +15,7 @@
     "@react-three/drei": "^10.7.6",
     "@react-three/fiber": "^9.3.0",
     "@tailwindcss/vite": "^4.1.13",
+    "@tanstack/react-router": "^1.132.47",
     "@types/three": "^0.180.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
@@ -21,6 +24,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
+    "@tanstack/router-cli": "^1.132.51",
+    "@tanstack/router-plugin": "^1.132.51",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.3",

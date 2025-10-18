@@ -1,28 +1,13 @@
 import { HomeScence } from "@/components/3d/scence";
+import { createFileRoute } from "@tanstack/react-router";
 
-export default function HomeLayout() {
+export const Route = createFileRoute("/")({
+  component: Index,
+});
+
+function Index() {
   return (
     <>
-      <div className="grid grid-cols-[20%_1fr_20%] container mx-auto fixed top-12 justify-between left-0 right-0 z-10">
-        <div className="text-white font-bold text-lg">Wai Yan Min Aung</div>
-        <div className="flex gap-16 text-sm justify-center">
-          <a href="" className="text-white font-light">
-            About
-          </a>
-          <a href="" className="text-white font-light">
-            Experiences
-          </a>
-          <a href="" className="text-white font-light">
-            Projects
-          </a>
-        </div>
-        <div className="flex">
-          <button className="border  border-white px-5 py-2.5 text-sm rounded text-white hover:bg-white hover:text-black transition cursor-pointer ms-auto">
-            Download Resume
-          </button>
-        </div>
-      </div>
-
       <div className="h-screen bg-gradient-to-r from-[#282727]  to-[#0C0C0E]">
         <div className="pointer-events-none absolute inset-0 [background-size:200px_200px] select-none [background-image:linear-gradient(to_right,#2C2C2C_1px,transparent_1px)]" />
         <HomeScence />
