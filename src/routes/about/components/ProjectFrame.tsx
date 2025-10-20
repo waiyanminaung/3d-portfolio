@@ -12,7 +12,7 @@ const Tab = ({ label, className }: { label: string; className?: string }) => {
   return (
     <div
       className={cn(
-        "inline-flex items-center px-4 py-3.5 border border-vscode-border text-sm relative -bottom-[1px] text-vscode bg-vscode-dark text-vscode-text ",
+        "inline-flex items-center px-4 py-3.5 border border-vscode-border text-sm relative -bottom-[1px] text-vscode bg-vscode-dark text-vscode-text z-10",
         "group-[.active]:text-white group-[.active]:bg-vscode-base group-[.active]:!border-b-transparent",
         className
       )}
