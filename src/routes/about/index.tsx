@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import Footer from "@/components/layout/Footer";
+import SelectedProjects from "./components/SelectedProjects";
 
 export const Route = createFileRoute("/about/")({
   component: About,
@@ -37,7 +39,7 @@ const codingSkills = [
   { skill: "Next.js", icon: "/images/skill/next.svg" },
   { skill: "React Native", icon: "/images/skill/react.svg" },
   { skill: "Laravel", icon: "/images/skill/laravel.svg" },
-  { skill: "WordPress", icon: "/images/skill/wordpress.svg" },
+  { skill: "WordPress", icon: "/images/skill/wordpress-dark.svg" },
 ];
 
 const devopsSkills = [
@@ -140,6 +142,10 @@ function About() {
           ))}
         </div>
       </div>
+
+      <SelectedProjects />
+
+      <Footer />
     </div>
   );
 }

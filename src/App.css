@@ -14,8 +14,42 @@
   --color-gray-800: #1e1e1e;
   --color-gray-900: #141414;
   --color-gray-950: #0a0a0a;
+
+  /*
+  Define the colors using the --color-[name] namespace.
+  This will automatically generate utility classes like:
+  bg-vscode-base, text-vscode-text, border-vscode-border, etc.
+  */
+  --color-vscode-base: #1f1f1f;
+  --color-vscode-surface: #252526;
+  --color-vscode-dark: #181818;
+  --color-vscode-border: #404040;
+  --color-vscode-text: #a9a9a9;
+  --color-vscode-blue: #0078d4;
+  --color-vscode-primary: #569cd6;
 }
 
 body {
   background: linear-gradient(to right, #282727, #0c0c0e);
 }
+
+/* VSCode Theming */
+/* .bg-vscode {
+  background-color: #1f1f1f;
+}
+
+.bg-vscode2 {
+  background-color: #252526;
+}
+
+.bg-vscode3 {
+  background-color: #181818;
+}
+
+.border-vscode {
+  border-color: #404040;
+}
+
+.text-vscode {
+  color: #a9a9a9;
+} */
