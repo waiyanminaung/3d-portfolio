@@ -48,7 +48,7 @@ const RootLayout = () => {
               key={menu.name}
               to={menu.to}
               className={cn(
-                "text-gray-300 hover:text-white transition-colors font-semibold",
+                "text-gray-300 hover:text-white transition-colors font-medium",
                 menu.isActive && "text-white "
               )}
             >
@@ -63,7 +63,7 @@ const RootLayout = () => {
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="size-4 md:hidden"
+              className="size-3.5 md:hidden"
             >
               <path
                 d="M3 21H21M12 3V17M12 17L19 10M12 17L5 10"

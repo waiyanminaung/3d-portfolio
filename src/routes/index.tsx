@@ -23,7 +23,7 @@ function Index() {
               <br />
               Developer
             </h1>
-            <p className="md:text-lg text-sm md:max-w-[380px] max-w-[80%] font-light">
+            <p className="md:text-lg text-sm md:max-w-[380px]  font-light">
               I'm experienced in Web Development and have a passion for crafting
               digital experiences.
             </p>
@@ -42,7 +42,7 @@ function Index() {
                 info.wyma@gmail.com
               </a>
             </div>
-            <div className="mt-1">
+            <div className="mt-1 md:text-base text-sm">
               <a href="">LinkedIn</a>, <a href="">GitHub</a>
             </div>
           </div>

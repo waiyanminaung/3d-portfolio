@@ -19,7 +19,7 @@ const buttonVariants = cva(
           "border border-white text-white hover:bg-white hover:text-black transition-colors duration-300",
       },
       size: {
-        default: "h-11 px-5 py-2",
+        default: "px-5 py-2",
       },
     },
     defaultVariants: {
