@@ -1,6 +1,12 @@
 import Button from "@/components/ui/Button";
+import { cn } from "@/utils";
 import { useGSAP } from "@gsap/react";
-import { createRootRoute, Link, Outlet } from "@tanstack/react-router";
+import {
+  createRootRoute,
+  Link,
+  Outlet,
+  useLocation,
+} from "@tanstack/react-router";
 import gsap from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -8,12 +14,24 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(useGSAP, ScrollSmoother, ScrollTrigger);
 
 const RootLayout = () => {
+  const location = useLocation();
+  const currentPathname = location.pathname;
+
   useGSAP(() => {
     ScrollSmoother.create({
       smooth: 2,
       smoothTouch: 0.1,
     });
   });
+
+  const menus = [
+    { name: "About", to: "/about", isActive: currentPathname === "/about" },
+    {
+      name: "Work",
+      to: "/projects",
+      isActive: currentPathname === "/projects",
+    },
+  ];
 
   return (
     <div id="smooth-content">
@@ -22,15 +40,18 @@ const RootLayout = () => {
           <Link to="/">Wai Yan Min Aung</Link>
         </div>
         <div className="flex gap-16 text-sm justify-center">
-          <Link to="/" className="text-white font-light">
-            Home
-          </Link>
-          <Link to="/about" className="text-white font-light">
-            About
-          </Link>
-          <Link to="/projects" className="text-white font-light">
-            Work
-          </Link>
+          {menus.map((menu) => (
+            <Link
+              key={menu.name}
+              to={menu.to}
+              className={cn(
+                "text-gray-300 hover:text-white transition-colors font-semibold",
+                menu.isActive && "text-white "
+              )}
+            >
+              {menu.name}
+            </Link>
+          ))}
         </div>
         <div className="flex">
           <Button variant="outline" className="ms-auto">
