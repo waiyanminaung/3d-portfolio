@@ -2,7 +2,40 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
-import ProjectFrame from "./ProjectFrame";
+import SelectedProjectItem from "./SelectedProjectItem";
+
+const projects = [
+  {
+    tab: "freshslice.md",
+    name: "Freshslice",
+    description:
+      "Developed the official website for Freshslice Pizza, a multi-award-winning chain known for its fresh ingredients and customizable pizza options. The project focused on creating an engaging online ordering experience with emphasis on usability and visual appeal.",
+    link: "https://www.freshslice.com",
+    image: "/images/projects/freshslice.png",
+    tab_icon: "/images/skill/wordpress-dark.svg",
+    tech_stacks: ["React", "TypeScript", "TailwindCSS"],
+  },
+  {
+    tab: "portfolio.md",
+    name: "3D Portfolio",
+    description:
+      "A personal portfolio website showcasing 3D projects and interactive web experiences, built with modern web technologies to highlight skills in 3D modeling and web development.",
+    link: "https://www.waiyanminaung.com",
+    image: "/images/projects/freshslice.png",
+    tab_icon: "/images/skill/react.svg",
+    tech_stacks: ["Next.js", "TypeScript", "Three.js", "TailwindCSS", "GSAP"],
+  },
+  {
+    tab: "ecommerce.md",
+    name: "E-Commerce Platform",
+    description:
+      "A comprehensive e-commerce platform designed to provide a seamless shopping experience, featuring user-friendly navigation, secure payment options, and robust product management capabilities.",
+    link: "https://www.example-ecommerce.com",
+    image: "/images/projects/freshslice.png",
+    tab_icon: "/images/skill/laravel.svg",
+    tech_stacks: ["Laravel", "Liquid", "JavaScript", "CSS"],
+  },
+];
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -18,8 +51,8 @@ const SelectedProjects = () => {
       ScrollTrigger.create({
         trigger: element,
         endTrigger: container.current,
-        start: "top 10%",
-        end: "bottom 90%",
+        start: "top 15%",
+        end: "bottom 85%",
         pin: true,
         pinSpacing: false,
         onEnter: () => {
@@ -62,67 +95,14 @@ const SelectedProjects = () => {
       <h3 className="text-4xl mb-8 text-white">Selected Projects</h3>
 
       <div ref={container}>
-        <ProjectFrame
-          no={1}
-          tab="notessa.md"
-          className=" h-[80vh] project-item"
-          key={`project-item-${1}`}
-        >
-          <div className="grid grid-cols-2">
-            <div>
-              <h1 className="text-3xl text-vscode-primary mb-2">## Notessa</h1>
-
-              <p className="text-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dignissimos perspiciatis iste provident laboriosam animi. Ex
-                corrupti doloribus saepe nam perferendis rerum sit debitis nemo
-                fuga ullam, eaque laboriosam eos molestiae!
-              </p>
-            </div>
-          </div>
-        </ProjectFrame>
-        <ProjectFrame
-          no={2}
-          tab="notessa-admin.md"
-          className=" h-[80vh] project-item"
-          key={`project-item-${2}`}
-        >
-          <div className="grid grid-cols-2">
-            <div>
-              <h1 className="text-3xl text-vscode-primary mb-2">
-                ## Notessa Admin
-              </h1>
-
-              <p className="text-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dignissimos perspiciatis iste provident laboriosam animi. Ex
-                corrupti doloribus saepe nam perferendis rerum sit debitis nemo
-                fuga ullam, eaque laboriosam eos molestiae!
-              </p>
-            </div>
-          </div>
-        </ProjectFrame>
-        <ProjectFrame
-          no={3}
-          tab="bridge-rock.md"
-          className=" h-[80vh] project-item"
-          key={`project-item-${3}`}
-        >
-          <div className="grid grid-cols-2">
-            <div>
-              <h1 className="text-3xl text-vscode-primary mb-2">
-                ## Bridge Rock
-              </h1>
-
-              <p className="text-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dignissimos perspiciatis iste provident laboriosam animi. Ex
-                corrupti doloribus saepe nam perferendis rerum sit debitis nemo
-                fuga ullam, eaque laboriosam eos molestiae!
-              </p>
-            </div>
-          </div>
-        </ProjectFrame>
+        {projects.map((project, index) => (
+          <SelectedProjectItem
+            no={index + 1}
+            data={project}
+            className="h-[70vh] project-item"
+            key={`project-item-${index}`}
+          />
+        ))}
       </div>
     </div>
   );
