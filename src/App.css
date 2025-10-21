@@ -33,23 +33,6 @@ body {
   background: linear-gradient(to right, #282727, #0c0c0e);
 }
 
-/* VSCode Theming */
-/* .bg-vscode {
-  background-color: #1f1f1f;
+.container {
+  @apply md:px-0 px-5;
 }
-
-.bg-vscode2 {
-  background-color: #252526;
-}
-
-.bg-vscode3 {
-  background-color: #181818;
-}
-
-.border-vscode {
-  border-color: #404040;
-}
-
-.text-vscode {
-  color: #a9a9a9;
-} */

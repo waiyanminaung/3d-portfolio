@@ -35,11 +35,14 @@ const RootLayout = () => {
 
   return (
     <div id="smooth-content">
-      <div className="grid grid-cols-[20%_1fr_20%] container mx-auto fixed top-10 justify-between left-0 right-0 z-10 items-center">
+      <div className="grid lg:grid-cols-[20%_1fr_20%] grid-cols-[1fr_auto_auto] container mx-auto fixed md:top-10 top-8 justify-between left-0 right-0 z-10 items-center gap-6">
         <div className="text-white font-bold text-lg">
-          <Link to="/">Wai Yan Min Aung</Link>
+          <Link to="/">
+            <span className="md:block hidden">Wai Yan Min Aung</span>{" "}
+            <span className="md:hidden">W</span>
+          </Link>
         </div>
-        <div className="flex gap-16 text-sm justify-center">
+        <div className="flex lg:gap-16 gap-6 text-sm justify-center">
           {menus.map((menu) => (
             <Link
               key={menu.name}
