@@ -40,6 +40,20 @@ const SelectedProjects = () => {
           element.classList.add("active");
         },
       });
+
+      gsap.fromTo(
+        element,
+        { opacity: 0 },
+        {
+          opacity: 1,
+          scrollTrigger: {
+            trigger: element,
+            start: "top 80%",
+            end: "top+=10% 30%",
+            scrub: true,
+          },
+        }
+      );
     });
   });
 
