@@ -10,7 +10,7 @@ function Index() {
     <>
       <div className="h-screen bg-gradient-to-r from-[#282727]  to-[#0C0C0E]">
         <div className="pointer-events-none absolute inset-0 [background-size:200px_200px] select-none [background-image:linear-gradient(to_right,#2C2C2C_1px,transparent_1px)]" />
-        <div className="h-full md:pt-0 pt-[30%] md:translate-x-0 translate-x-[15%]">
+        <div className="h-full md:pt-0 pt-[30%]">
           <HomeScence />
         </div>
       </div>
