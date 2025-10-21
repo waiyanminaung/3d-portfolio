@@ -12,7 +12,7 @@ export default function HomeScence() {
   const { width, height } = useDeviceSize();
 
   useEffect(() => {
-    const dynamicPosition = width > 767 ? [0, -1.7, 1.0] : [0.1, -1.7, 1.0];
+    const dynamicPosition = width > 767 ? [0, -1.7, 1.0] : [0.09, -1.7, 1.0];
 
     setPosition(dynamicPosition as [number, number, number]);
   }, [width, height]);
