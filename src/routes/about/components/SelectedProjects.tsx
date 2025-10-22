@@ -41,53 +41,70 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const SelectedProjects = () => {
   const container = useRef<HTMLDivElement>(null);
+  const mm = gsap.matchMedia();
 
   useGSAP(() => {
-    if (!container.current) return;
+    mm.revert();
 
-    const sections = gsap.utils.toArray<HTMLElement>(".project-item");
-
-    sections.forEach((element) => {
-      ScrollTrigger.create({
-        trigger: element,
-        endTrigger: container.current,
-        start: "top 15%",
-        end: "bottom 85%",
-        pin: true,
-        pinSpacing: false,
-        onEnter: () => {
-          sections.forEach((el) => el.classList.remove("active"));
-          element.classList.add("active");
-        },
-        onLeave: () => {
-          if (element === sections[sections.length - 1]) return;
-          sections.forEach((el) => el.classList.remove("active"));
-        },
-        onEnterBack: () => {
-          sections.forEach((el) => el.classList.remove("active"));
-          element.classList.add("active");
-        },
-        onLeaveBack: () => {
-          if (element === sections[sections.length - 1]) return;
-          sections.forEach((el) => el.classList.remove("active"));
-          element.classList.add("active");
-        },
-      });
-
-      gsap.fromTo(
-        element,
-        { opacity: 0 },
-        {
-          opacity: 1,
-          scrollTrigger: {
-            trigger: element,
-            start: "top 80%",
-            end: "top+=10% 30%",
-            scrub: true,
-          },
-        }
-      );
+    mm.add("(min-width: 1025px)", () => {
+      const start = "top 15%";
+      const end = "bottom 85%";
+      setupScrollTrigger(start, end);
     });
+
+    mm.add("(max-width: 1024px)", () => {
+      const start = "top 5%";
+      const end = "bottom 90%";
+      setupScrollTrigger(start, end);
+    });
+
+    function setupScrollTrigger(start: string, end: string) {
+      if (!container.current) return;
+
+      const sections = gsap.utils.toArray<HTMLElement>(".project-item");
+
+      sections.forEach((element) => {
+        ScrollTrigger.create({
+          trigger: element,
+          endTrigger: container.current,
+          start: start,
+          end: end,
+          pin: true,
+          pinSpacing: false,
+          onEnter: () => {
+            sections.forEach((el) => el.classList.remove("active"));
+            element.classList.add("active");
+          },
+          onLeave: () => {
+            if (element === sections[sections.length - 1]) return;
+            sections.forEach((el) => el.classList.remove("active"));
+          },
+          onEnterBack: () => {
+            sections.forEach((el) => el.classList.remove("active"));
+            element.classList.add("active");
+          },
+          onLeaveBack: () => {
+            if (element === sections[sections.length - 1]) return;
+            sections.forEach((el) => el.classList.remove("active"));
+            element.classList.add("active");
+          },
+        });
+
+        gsap.fromTo(
+          element,
+          { opacity: 0 },
+          {
+            opacity: 1,
+            scrollTrigger: {
+              trigger: element,
+              start: "top 80%",
+              end: "top+=10% 30%",
+              scrub: true,
+            },
+          }
+        );
+      });
+    }
   });
 
   return (
@@ -99,7 +116,7 @@ const SelectedProjects = () => {
           <SelectedProjectItem
             no={index + 1}
             data={project}
-            className="h-[70vh] project-item"
+            className="lg:h-[70vh] h-[90vh] project-item"
             key={`project-item-${index}`}
           />
         ))}

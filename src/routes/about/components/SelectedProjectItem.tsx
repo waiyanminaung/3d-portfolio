@@ -1,3 +1,4 @@
+import useDeviceSize from "@/hooks/useDeviceSize";
 import type { SelectedProject } from "@/types/Project";
 import { cn } from "@/utils";
 
@@ -12,7 +13,8 @@ const SelectedProjectItem: React.FC<SelectedProjectItemProps> = ({
   no = 1,
   className,
 }) => {
-  const tabWidth = 180;
+  const { width } = useDeviceSize();
+  const tabWidth = width > 768 ? 180 : 50;
   const left = (no - 1) * tabWidth;
   const paddingLeft = no > 1 ? left - no : left;
 
@@ -23,19 +25,19 @@ const SelectedProjectItem: React.FC<SelectedProjectItemProps> = ({
         <div
           className={cn(
             "inline-flex items-center px-4 py-3.5 border border-vscode-border text-sm relative -bottom-[1px] text-vscode bg-vscode-dark text-vscode-text z-10",
-            "group-[.active]:text-white group-[.active]:bg-vscode-base group-[.active]:!border-b-transparent w-[180px]"
+            "group-[.active]:text-white group-[.active]:bg-vscode-base group-[.active]:!border-b-transparent lg:w-[180px]"
           )}
         >
           <div className="absolute top-0 w-full bg-transparent group-[.active]:bg-vscode-blue h-[1px] left-0 right-0" />
           <img src={data.tab_icon} className="size-4 mr-2 shrink-0" />
-          <span className="flex-1 whitespace-nowrap text-ellipsis overflow-hidden">
+          <span className="flex-1 whitespace-nowrap text-ellipsis overflow-hidden md:inline-block hidden">
             {data.tab}
           </span>
         </div>
       </div>
 
       {/* Page Content */}
-      <div className="border border-vscode-border bg-vscode-base px-6 pt-10 pb-6 text-sm sm:text-base flex-1 text-white relative overflow-hidden">
+      <div className="border border-vscode-border bg-vscode-base sm:px-6 px-4 pt-10 sm:pb-6 pb-4 text-sm sm:text-base flex-1 text-white relative overflow-hidden">
         <div className="flex items-center gap-1 text-xs text-vscode-text mb-2 absolute top-2">
           <span>wyma</span>
           <svg
@@ -70,13 +72,15 @@ const SelectedProjectItem: React.FC<SelectedProjectItemProps> = ({
           <span>{data.tab}</span>
         </div>
 
-        <div className="grid grid-cols-[40%_1fr] gap-10 h-full">
-          <div className="space-y-8 pt-2">
+        <div className="grid lg:grid-cols-[40%_1fr] gap-10 h-full">
+          <div className="md:space-y-8 space-y-4 pt-2">
             <div>
               <h1 className="font-semibold text-vscode-primary mb-2">
                 ## {data.name}
               </h1>
-              <p className="text-sm leading-6 font-light">{data.description}</p>
+              <p className="md:text-sm text-xs leading-6 font-light">
+                {data.description}
+              </p>
             </div>
 
             <div>
@@ -95,9 +99,9 @@ const SelectedProjectItem: React.FC<SelectedProjectItemProps> = ({
               </div>
             </div>
           </div>
-          <div className="relative h-full overflow-hidden -mr-6">
+          <div className="relative h-full overflow-hidden lg:-mr-6 lg:block">
             <div
-              className="aspect-video bg-gray-500 h-full ms-auto rounded-l-xl"
+              className="aspect-video bg-gray-500 h-full ms-auto lg:rounded-l-xl rounded-xl bg-cover lg:w-auto w-full bg-center"
               style={{ backgroundImage: `url(${data.image})` }}
             />
           </div>
