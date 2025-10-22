@@ -26,7 +26,7 @@ const Footer = () => {
       </div>
 
       <div className="text-center z-10 px-4 max-w-lg mx-auto container">
-        <div className="mb-32">
+        <div className="sm:mb-32 mb-20">
           <div className="relative mb-8">
             <div className="rounded-full sm:size-32 size-28 lg:w-36 lg:h-36 mx-auto overflow-hidden bg-white">
               <img

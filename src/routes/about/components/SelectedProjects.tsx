@@ -38,10 +38,10 @@ const projects = [
 ];
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
+const mm = gsap.matchMedia();
 
 const SelectedProjects = () => {
   const container = useRef<HTMLDivElement>(null);
-  const mm = gsap.matchMedia();
 
   useGSAP(() => {
     mm.revert();
