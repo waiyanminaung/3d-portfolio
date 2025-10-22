@@ -38,74 +38,88 @@ const projects = [
 ];
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
-const mm = gsap.matchMedia();
 
 const SelectedProjects = () => {
-  const container = useRef<HTMLDivElement>(null);
+  const container = useRef<HTMLDivElement | null>(null);
 
-  useGSAP(() => {
-    mm.revert();
+  useGSAP(
+    () => {
+      const mm = gsap.matchMedia();
 
-    mm.add("(min-width: 1025px)", () => {
-      const start = "top 15%";
-      const end = "bottom 85%";
-      setupScrollTrigger(start, end);
-    });
-
-    mm.add("(max-width: 1024px)", () => {
-      const start = "top 5%";
-      const end = "bottom 90%";
-      setupScrollTrigger(start, end);
-    });
-
-    function setupScrollTrigger(start: string, end: string) {
-      if (!container.current) return;
-
-      const sections = gsap.utils.toArray<HTMLElement>(".project-item");
-
-      sections.forEach((element) => {
-        ScrollTrigger.create({
-          trigger: element,
-          endTrigger: container.current,
-          start: start,
-          end: end,
-          pin: true,
-          pinSpacing: false,
-          onEnter: () => {
-            sections.forEach((el) => el.classList.remove("active"));
-            element.classList.add("active");
-          },
-          onLeave: () => {
-            if (element === sections[sections.length - 1]) return;
-            sections.forEach((el) => el.classList.remove("active"));
-          },
-          onEnterBack: () => {
-            sections.forEach((el) => el.classList.remove("active"));
-            element.classList.add("active");
-          },
-          onLeaveBack: () => {
-            if (element === sections[sections.length - 1]) return;
-            sections.forEach((el) => el.classList.remove("active"));
-            element.classList.add("active");
-          },
+      requestAnimationFrame(() => {
+        mm.add("(min-width: 1025px)", () => {
+          setupScrollTrigger("top 15%", "bottom 85%");
         });
 
-        gsap.fromTo(
-          element,
-          { opacity: 0 },
-          {
-            opacity: 1,
-            scrollTrigger: {
-              trigger: element,
-              start: "top 80%",
-              end: "top+=10% 30%",
-              scrub: true,
-            },
-          }
-        );
+        mm.add("(max-width: 1024px)", () => {
+          setupScrollTrigger("top 5%", "bottom 90%");
+        });
       });
+
+      function setupScrollTrigger(start: string, end: string) {
+        if (!container.current) return;
+
+        ScrollTrigger.getAll().forEach((t) => t.kill());
+
+        const sections = gsap.utils.toArray<HTMLElement>(".project-item");
+        if (!sections.length) return;
+
+        sections.forEach((element) => {
+          ScrollTrigger.create({
+            trigger: element,
+            endTrigger: container.current,
+            start,
+            end,
+            pin: true,
+            pinSpacing: false,
+            invalidateOnRefresh: true,
+            onEnter: () => {
+              sections.forEach((el) => el.classList.remove("active"));
+              element.classList.add("active");
+            },
+            onLeave: () => {
+              if (element === sections[sections.length - 1]) return;
+              sections.forEach((el) => el.classList.remove("active"));
+            },
+            onEnterBack: () => {
+              sections.forEach((el) => el.classList.remove("active"));
+              element.classList.add("active");
+            },
+            onLeaveBack: () => {
+              if (element === sections[sections.length - 1]) return;
+              sections.forEach((el) => el.classList.remove("active"));
+              element.classList.add("active");
+            },
+          });
+
+          gsap.fromTo(
+            element,
+            { opacity: 0 },
+            {
+              opacity: 1,
+              scrollTrigger: {
+                trigger: element,
+                start: "top 80%",
+                end: "top+=10% 30%",
+                scrub: true,
+                // markers: true, // enable while debugging
+              },
+            }
+          );
+        });
+
+        setTimeout(() => ScrollTrigger.refresh(), 500);
+      }
+
+      return () => {
+        mm.revert();
+      };
+    },
+    {
+      scope: container,
+      dependencies: [],
     }
-  });
+  );
 
   return (
     <div>
