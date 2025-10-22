@@ -3,8 +3,8 @@ import FloatingFooterIcons from "./FloatingFooterIcons";
 
 const Footer = () => {
   return (
-    <div className="relative bg-transparent flex items-center justify-center overflow-hidden pb-20 pt-36 ">
-      <div className="lg:block hidden">
+    <div className="relative bg-transparent flex items-center justify-center overflow-hidden pb-20 pt-36">
+      <div className="lg:block hidden absolute container">
         <FloatingFooterIcons
           images={[
             "/images/skill/javascript.svg",

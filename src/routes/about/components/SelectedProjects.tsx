@@ -52,7 +52,7 @@ const SelectedProjects = () => {
         });
 
         mm.add("(max-width: 1024px)", () => {
-          setupScrollTrigger("top 5%", "bottom 90%");
+          setupScrollTrigger("top 10%", "bottom 90%");
         });
       });
 
@@ -102,7 +102,6 @@ const SelectedProjects = () => {
                 start: "top 80%",
                 end: "top+=10% 30%",
                 scrub: true,
-                // markers: true, // enable while debugging
               },
             }
           );
@@ -130,7 +129,7 @@ const SelectedProjects = () => {
           <SelectedProjectItem
             no={index + 1}
             data={project}
-            className="lg:h-[70vh] h-[90vh] project-item"
+            className="lg:h-[70vh] h-[80vh] project-item"
             key={`project-item-${index}`}
           />
         ))}
