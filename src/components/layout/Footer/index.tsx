@@ -7,9 +7,9 @@ const Footer = () => {
       <div className="lg:block hidden absolute container">
         <FloatingFooterIcons
           images={[
-            "/images/skill/javascript.svg",
+            "/images/skill/wordpress-light.svg",
             "/images/skill/docker.svg",
-            "/images/skill/git.svg",
+            "/images/skill/figma.svg",
             "/images/skill/laravel.svg",
           ]}
         />
@@ -18,9 +18,9 @@ const Footer = () => {
           position="right"
           images={[
             "/images/skill/typescript.svg",
-            "/images/skill/github.svg",
+            "/images/skill/nextjs-light.svg",
             "/images/skill/react.svg",
-            "/images/skill/wordpress-light.svg",
+            "/images/skill/javascript.svg",
           ]}
         />
       </div>

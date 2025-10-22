@@ -36,10 +36,11 @@ const experiences = [
 const codingSkills = [
   { skill: "JavaScript / TypeScript", icon: "/images/skill/javascript.svg" },
   { skill: "React", icon: "/images/skill/react.svg" },
-  { skill: "Next.js", icon: "/images/skill/next.svg" },
+  { skill: "Next.js", icon: "/images/skill/nextjs-dark.svg" },
   { skill: "React Native", icon: "/images/skill/react.svg" },
   { skill: "Laravel", icon: "/images/skill/laravel.svg" },
   { skill: "WordPress", icon: "/images/skill/wordpress-dark.svg" },
+  { skill: "Playwright", icon: "/images/skill/playwright.svg" },
 ];
 
 const devopsSkills = [
@@ -62,21 +63,21 @@ function About() {
           </div>
           <div className="lg:p-14 sm:p-8 text-white space-y-5">
             <h2 className="text-base font-medium">Hi! I'm Wai Yan,</h2>
-            <p className="font-light leading-[1.8]">
+            <p className="font-light md:leading-[1.8] leading-6">
               A passionate Front-End Developer with over 8 years of experience
               creating engaging user interfaces. My core expertise is in React
               and React Native, and I bring a significant advantage by
               possessing strong full-stack experience with Laravel and
               WordPress.
             </p>
-            <p className="font-light leading-[1.8]">
+            <p className="font-light md:leading-[1.8] leading-6">
               This comprehensive understanding allows me to build seamless,
               performant front-ends that integrate perfectly with back-end
               systems. I have successfully applied these skills across
               E-commerce platforms, Learning Management Systems, and CMS
               projects.
             </p>
-            <p className="font-light leading-[1.8]">
+            <p className="font-light md:leading-[1.8] leading-6">
               My dedication lies in continuous learning and applying the right
               technology to solve user and business problems. Explore my
               portfolio to see how my focused front-end skills and holistic
