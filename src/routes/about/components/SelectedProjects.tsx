@@ -11,29 +11,39 @@ const projects = [
     description:
       "Developed the official website for Freshslice Pizza, a multi-award-winning chain known for its fresh ingredients and customizable pizza options. The project focused on creating an engaging online ordering experience with emphasis on usability and visual appeal.",
     link: "https://www.freshslice.com",
-    image: "/images/projects/freshslice.png",
+    image: "/images/projects/freshslice.jpg",
     tab_icon: "/images/skill/wordpress-dark.svg",
     tech_stacks: ["React", "TypeScript", "TailwindCSS"],
   },
   {
-    tab: "portfolio.md",
-    name: "3D Portfolio",
+    tab: "lottery.md",
+    name: "Mytel Pay's Lottery System",
     description:
       "A personal portfolio website showcasing 3D projects and interactive web experiences, built with modern web technologies to highlight skills in 3D modeling and web development.",
     link: "https://www.waiyanminaung.com",
-    image: "/images/projects/freshslice.png",
+    image: "/images/projects/lottery.jpg",
     tab_icon: "/images/skill/react.svg",
-    tech_stacks: ["Next.js", "TypeScript", "Three.js", "TailwindCSS", "GSAP"],
+    tech_stacks: ["React Native", "Redux"],
   },
   {
-    tab: "ecommerce.md",
-    name: "E-Commerce Platform",
+    tab: "ejls-learning.md",
+    name: "EJLS Learning Management System",
     description:
       "A comprehensive e-commerce platform designed to provide a seamless shopping experience, featuring user-friendly navigation, secure payment options, and robust product management capabilities.",
     link: "https://www.example-ecommerce.com",
-    image: "/images/projects/freshslice.png",
+    image: "/images/projects/ejls.jpg",
     tab_icon: "/images/skill/laravel.svg",
-    tech_stacks: ["Laravel", "Liquid", "JavaScript", "CSS"],
+    tech_stacks: ["Laravel", "JavaScript"],
+  },
+  {
+    tab: "bridgerock.md",
+    name: "U.S. Real Estate Investment & Management",
+    description:
+      "A comprehensive e-commerce platform designed to provide a seamless shopping experience, featuring user-friendly navigation, secure payment options, and robust product management capabilities.",
+    link: "https://www.example-ecommerce.com",
+    image: "/images/projects/bridgerock.jpg",
+    tab_icon: "/images/skill/nextjs-light.svg",
+    tech_stacks: ["Next.js", "TypeScript", "TailwindCSS"],
   },
 ];
 

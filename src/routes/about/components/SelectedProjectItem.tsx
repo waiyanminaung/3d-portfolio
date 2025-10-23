@@ -101,7 +101,7 @@ const SelectedProjectItem: React.FC<SelectedProjectItemProps> = ({
           </div>
           <div className="relative h-full overflow-hidden lg:-mr-6 lg:block">
             <div
-              className="aspect-video lg:bg-gray-500 h-full ms-auto lg:rounded-l-xl bg-contain bg-bottom bg-no-repeat lg:w-auto w-full lg:bg-center"
+              className="aspect-video lg:bg-gray-500 h-full ms-auto lg:rounded-l-xl bg-contain bg-bottom bg-no-repeat lg:w-auto w-full lg:bg-cover lg:bg-center"
               style={{ backgroundImage: `url(${data.image})` }}
             />
           </div>

@@ -20,15 +20,21 @@ const experiences = [
     logo: "/images/exp/myid.png",
   },
   {
+    role: "Frontend Developer",
+    company: "MOC Interactive",
+    duration: "Jan 2022 - Dec 2022",
+    logo: "/images/exp/moc.png",
+  },
+  {
     role: "Full Stack Developer",
     company: "Myanmar Web Creator",
-    duration: "Jun 2018 - Dec 2021",
+    duration: "Dec 2020 - Sep 2022",
     logo: "/images/exp/mwc.png",
   },
   {
     role: "Junior WordPress Developer",
     company: "Myanmar Web Designer",
-    duration: "Jan 2016 - May 2018",
+    duration: "Jun 2017 - Nov 2019",
     logo: "/images/exp/mwd.png",
   },
 ];
