@@ -9,17 +9,17 @@ const projects = [
     tab: "freshslice.md",
     name: "Freshslice",
     description:
-      "Developed the official website for Freshslice Pizza, a multi-award-winning chain known for its fresh ingredients and customizable pizza options. The project focused on creating an engaging online ordering experience with emphasis on usability and visual appeal.",
+      "Developed a custom WordPress theme from scratch for FreshSlice Pizza Canada, creating a fast, brand-accurate corporate website that serves as the central hub for their menu, rewards program, and online ordering funnel",
     link: "https://www.freshslice.com",
     image: "/images/projects/freshslice.jpg",
     tab_icon: "/images/skill/wordpress-dark.svg",
-    tech_stacks: ["React", "TypeScript", "TailwindCSS"],
+    tech_stacks: ["WordPress", "Custom Theme", "ACF Pro"],
   },
   {
     tab: "lottery.md",
     name: "Mytel Pay's Lottery System",
     description:
-      "A personal portfolio website showcasing 3D projects and interactive web experiences, built with modern web technologies to highlight skills in 3D modeling and web development.",
+      "MytelPay, a mobile money service, is known as the most secure E-wallet in Myanmar with PCI-DSS  Global Certificate. It facilitate to convenient and secure financial transactions. Proficient in leveraging digital platforms for efficient money transfers, bill payments, and mobile top-ups contributing to streamlined financial management.",
     link: "https://www.waiyanminaung.com",
     image: "/images/projects/lottery.jpg",
     tab_icon: "/images/skill/react.svg",
@@ -29,7 +29,7 @@ const projects = [
     tab: "ejls-learning.md",
     name: "EJLS Learning Management System",
     description:
-      "A comprehensive e-commerce platform designed to provide a seamless shopping experience, featuring user-friendly navigation, secure payment options, and robust product management capabilities.",
+      "Developed 'EJLS,' a full-stack Learning Management System featuring member enrollment, course progress tracking, automated exams with instant results, and dynamic certificate generation",
     link: "https://www.example-ecommerce.com",
     image: "/images/projects/ejls.jpg",
     tab_icon: "/images/skill/laravel.svg",
@@ -39,7 +39,7 @@ const projects = [
     tab: "bridgerock.md",
     name: "U.S. Real Estate Investment & Management",
     description:
-      "A comprehensive e-commerce platform designed to provide a seamless shopping experience, featuring user-friendly navigation, secure payment options, and robust product management capabilities.",
+      "Developed the frontend for an AI-driven real estate platform, featuring automated PDF data extraction, a real-time management dashboard, and an interactive chat interface to query document insights.",
     link: "https://www.example-ecommerce.com",
     image: "/images/projects/bridgerock.jpg",
     tab_icon: "/images/skill/nextjs-light.svg",

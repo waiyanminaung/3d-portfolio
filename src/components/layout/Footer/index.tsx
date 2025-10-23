@@ -42,7 +42,14 @@ const Footer = () => {
             reality with precision and passion.
           </p>
 
-          <Button variant="outline">Download Resume</Button>
+          <Button variant="outline" asChild>
+            <a
+              href="https://drive.google.com/file/d/1-Kb2gs8ylT1lCNX3gTIVZuS1tVjDBm8F/view?usp=sharing"
+              target="_blank"
+            >
+              Download Resume
+            </a>
+          </Button>
         </div>
 
         <div className="flex justify-center gap-6 lg:gap-8 mb-8">

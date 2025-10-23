@@ -57,23 +57,28 @@ const RootLayout = () => {
           ))}
         </div>
         <div className="flex">
-          <Button variant="outline" className="ms-auto">
-            <span className="md:inline-block hidden">Download</span>
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="size-3.5 md:hidden"
+          <Button variant="outline" className="ms-auto" asChild>
+            <a
+              href="https://drive.google.com/file/d/1-Kb2gs8ylT1lCNX3gTIVZuS1tVjDBm8F/view?usp=sharing"
+              target="_blank"
             >
-              <path
-                d="M3 21H21M12 3V17M12 17L19 10M12 17L5 10"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            Resume
+              <span className="md:inline-block hidden">Download</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="size-3.5 md:hidden"
+              >
+                <path
+                  d="M3 21H21M12 3V17M12 17L19 10M12 17L5 10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Resume
+            </a>
           </Button>
         </div>
       </div>
