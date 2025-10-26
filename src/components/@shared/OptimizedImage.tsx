@@ -23,10 +23,17 @@ const OptimizedImage = ({
   ...props
 }: OptimizedImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const shouldShowBlurhash = blurHash && !isLoaded;
 
   return (
-    <div className={cn("relative overflow-hidden", props.className)}>
-      {!isLoaded && blurHash && (
+    <div
+      className={cn(
+        "overflow-hidden",
+        props.className,
+        shouldShowBlurhash && "relative"
+      )}
+    >
+      {shouldShowBlurhash && (
         <Blurhash
           hash={blurHash.hash}
           resolutionX={blurHash.resolutionX || 32}

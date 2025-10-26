@@ -12,6 +12,7 @@ const projects = [
       "Developed a custom WordPress theme from scratch for FreshSlice Pizza Canada, creating a fast, brand-accurate corporate website that serves as the central hub for their menu, rewards program, and online ordering funnel",
     link: "https://www.freshslice.com",
     image: "/images/projects/freshslice.jpg",
+    image_blurhash: "",
     tab_icon: "/images/skill/wordpress-dark.svg",
     tech_stacks: ["WordPress", "Custom Theme", "ACF Pro"],
   },
@@ -82,6 +83,7 @@ const SelectedProjects = () => {
             end,
             pin: true,
             pinSpacing: false,
+            markers: true,
             invalidateOnRefresh: true,
             onEnter: () => {
               sections.forEach((el) => el.classList.remove("active"));
@@ -116,8 +118,6 @@ const SelectedProjects = () => {
             }
           );
         });
-
-        setTimeout(() => ScrollTrigger.refresh(), 500);
       }
 
       return () => {
