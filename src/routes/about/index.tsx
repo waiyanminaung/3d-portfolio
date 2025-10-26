@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import Footer from "@/components/layout/Footer";
-import SelectedProjects from "./components/SelectedProjects";
+import SelectedProjects from "./-components/SelectedProjects";
+import OptimizedImage from "@/components/@shared/OptimizedImage";
 
 export const Route = createFileRoute("/about/")({
   component: About,
@@ -61,10 +62,13 @@ function About() {
       <div className="container mx-auto pt-36">
         <div className="sm:border border-gray-700 grid xl:grid-cols-[minmax(300px,500px)_1fr] lg:grid-cols-[40%_1fr] sm:gap-0 gap-7">
           <div className="lg:border-r border-gray-700 lg:p-14 sm:p-8 flex items-center justify-center">
-            <img
+            <OptimizedImage
               src="/images/profile.png"
+              blurHash={{ hash: "UIECazIUEg%1~WbHNHjF4.s:-pM|I=aew]kD" }}
               alt="Wai Yan Min Aung"
-              className="rounded-full xl:max-w-[316px] max-w-[200px] w-full"
+              width={316}
+              height={316}
+              className="rounded-full xl:w-[316px] w-[200px]"
             />
           </div>
           <div className="lg:p-14 sm:p-8 text-white space-y-5">
@@ -102,9 +106,11 @@ function About() {
               >
                 {/*  Hidden on small screens */}
                 <div className="aspect-square bg-white rounded-lg p-2 max-w-14 order-1 md:order-none">
-                  <img
+                  <OptimizedImage
                     src={exp.logo}
-                    alt="Company Logo"
+                    alt={exp.company}
+                    width={60}
+                    height={60}
                     className="object-contain h-full w-full"
                   />
                 </div>

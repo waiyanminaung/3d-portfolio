@@ -49,9 +49,9 @@ const SelectedProjectItem: React.FC<SelectedProjectItemProps> = ({
             <path
               d="M9 18L15 12L9 6"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
           <span>projects</span>
@@ -64,9 +64,9 @@ const SelectedProjectItem: React.FC<SelectedProjectItemProps> = ({
             <path
               d="M9 18L15 12L9 6"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
           <span>{data.tab}</span>
