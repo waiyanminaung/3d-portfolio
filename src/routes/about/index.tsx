@@ -68,7 +68,7 @@ function About() {
               alt="Wai Yan Min Aung"
               width={316}
               height={316}
-              className="rounded-full"
+              className="rounded-full xl:w-[316px] w-[200px]"
             />
           </div>
           <div className="lg:p-14 sm:p-8 text-white space-y-5">
