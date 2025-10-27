@@ -83,7 +83,6 @@ const SelectedProjects = () => {
             end,
             pin: true,
             pinSpacing: false,
-            markers: true,
             invalidateOnRefresh: true,
             onEnter: () => {
               sections.forEach((el) => el.classList.remove("active"));
