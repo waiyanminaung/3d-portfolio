@@ -2,43 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import Footer from "@/components/layout/Footer";
 import SelectedProjects from "./-components/SelectedProjects";
 import OptimizedImage from "@/components/@shared/OptimizedImage";
+import useUser from "@/hooks/useUser";
 
 export const Route = createFileRoute("/about/")({
   component: About,
 });
-
-const experiences = [
-  {
-    role: "Frontend Developer",
-    company: "High Ground",
-    duration: "Jan 2024 - Present",
-    logo: "/images/exp/high-ground.png",
-  },
-  {
-    role: "React Native Developer",
-    company: "Telecom Myanmar",
-    duration: "Jan 2023 - Dec 2023",
-    logo: "/images/exp/myid.png",
-  },
-  {
-    role: "Frontend Developer",
-    company: "MOC Interactive",
-    duration: "Jan 2022 - Dec 2022",
-    logo: "/images/exp/moc.png",
-  },
-  {
-    role: "Full Stack Developer",
-    company: "Myanmar Web Creator",
-    duration: "Dec 2020 - Sep 2022",
-    logo: "/images/exp/mwc.png",
-  },
-  {
-    role: "Junior WordPress Developer",
-    company: "Myanmar Web Designer",
-    duration: "Jun 2017 - Nov 2019",
-    logo: "/images/exp/mwd.png",
-  },
-];
 
 const codingSkills = [
   { skill: "JavaScript / TypeScript", icon: "/images/skill/javascript.svg" },
@@ -57,49 +25,45 @@ const devopsSkills = [
 ];
 
 function About() {
+  const { data, error } = useUser();
+
+  if (error || !data) {
+    return <div className="text-red-500">Error: {error}</div>;
+  }
+
+  const { about, personal, experience } = data;
+
   return (
     <>
       <div className="container mx-auto pt-36">
         <div className="sm:border border-gray-700 grid xl:grid-cols-[minmax(300px,500px)_1fr] lg:grid-cols-[40%_1fr] sm:gap-0 gap-7">
           <div className="lg:border-r border-gray-700 lg:p-14 sm:p-8 flex items-center justify-center">
             <OptimizedImage
-              src="/images/profile.png"
-              blurHash={{ hash: "UIECazIUEg%1~WbHNHjF4.s:-pM|I=aew]kD" }}
-              alt="Wai Yan Min Aung"
+              src={personal.profile}
+              blurHash={{ hash: personal.profile_blurhash }}
+              alt={personal.name || "Profile"}
               width={316}
               height={316}
               className="rounded-full xl:w-[316px] w-[200px]"
             />
           </div>
           <div className="lg:p-14 sm:p-8 text-white space-y-5">
-            <h2 className="text-base font-medium">Hi! I'm Wai Yan,</h2>
-            <p className="font-light md:leading-[1.8] leading-6">
-              A passionate Front-End Developer with over 8 years of experience
-              creating engaging user interfaces. My core expertise is in React
-              and React Native, and I bring a significant advantage by
-              possessing strong full-stack experience with Laravel and
-              WordPress.
-            </p>
-            <p className="font-light md:leading-[1.8] leading-6">
-              This comprehensive understanding allows me to build seamless,
-              performant front-ends that integrate perfectly with back-end
-              systems. I have successfully applied these skills across
-              E-commerce platforms, Learning Management Systems, and CMS
-              projects.
-            </p>
-            <p className="font-light md:leading-[1.8] leading-6">
-              My dedication lies in continuous learning and applying the right
-              technology to solve user and business problems. Explore my
-              portfolio to see how my focused front-end skills and holistic
-              development approach can bring value to your projects.
-            </p>
+            <h2 className="text-base font-medium">
+              Hi! I'm {personal?.name?.split(" ")[0] || "Wai Yan"},
+            </h2>
+            {/* Render about paragraphs from JSON data */}
+            {about?.paragraphs.map((paragraph, index) => (
+              <p key={index} className="font-light md:leading-[1.8] leading-6">
+                {paragraph}
+              </p>
+            ))}
           </div>
         </div>
 
         <div className="grid lg:grid-cols-[minmax(300px,500px)_1fr] text-white py-26 gap-12">
           <h3 className="text-4xl">Experiences</h3>
           <div className="divide-y divide-gray-700 -my-6">
-            {experiences.map((exp) => (
+            {experience.map((exp) => (
               <div
                 key={exp.company}
                 className="grid md:grid-cols-[auto_1fr_150px] md:gap-5 gap-3.5 items-center py-6"
@@ -117,11 +81,11 @@ function About() {
 
                 <div className="order-3 md:order-none">
                   <h4 className="text-lg font-medium">{exp.company}</h4>
-                  <div className="text-sm mt-1">{exp.role}</div>
+                  <div className="text-sm mt-1">{exp.position}</div>
                 </div>
 
                 <span className="text-xs md:border border-white md:px-1 md:py-2 inline-block rounded-3xl md:text-center md:order-none order-2">
-                  {exp.duration}
+                  {exp.period.from} - {exp.period.to}
                 </span>
               </div>
             ))}

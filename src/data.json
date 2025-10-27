@@ -1,0 +1,84 @@
+{
+  "about": {
+    "paragraphs": [
+      "Hi! I'm Wai Yan, a passionate Front-End Developer with over 8 years of experience creating engaging user interfaces. My core expertise is in React and React Native, and I bring a significant advantage by possessing strong full-stack experience with Laravel and WordPress.",
+      "This comprehensive understanding allows me to build seamless, performant front-ends that integrate perfectly with back-end systems. I have successfully applied these skills across E-commerce platforms, Learning Management Systems, and CMS projects.",
+      "My dedication lies in continuous learning and applying the right technology to solve user and business problems. Explore my portfolio to see how my focused front-end skills and holistic development approach can bring value to your projects."
+    ]
+  },
+  "personal": {
+    "tag": "I'm experienced in Web Development and have a passion for crafting digital experiences.",
+    "name": "Wai Yan Min Aung",
+    "resume": "https://drive.google.com/file/d/1-Kb2gs8ylT1lCNX3gTIVZuS1tVjDBm8F/view",
+    "social": {
+      "github": "https://github.com/waiyanminaung",
+      "linkedin": "https://www.linkedin.com/in/dev-wyma/",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=+959698192644"
+    },
+    "contact": {
+      "email": "info.wyma@gmail.com",
+      "phone": "+66971258531"
+    },
+    "profile": "https://fvqjpplvophvfqedyned.supabase.co/storage/v1/object/sign/Portfolio/images/profiles/standard-profile.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81ZjJjNzY1NS05NGI1LTRmMGQtOTM1Yy1hNTJjZDQyZjFiMmEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3J0Zm9saW8vaW1hZ2VzL3Byb2ZpbGVzL3N0YW5kYXJkLXByb2ZpbGUucG5nIiwiaWF0IjoxNzYxNDcxNTMxLCJleHAiOjE3NjQwNjM1MzF9.i2OQvAJbiAKIQP3hOaeGrud8K6kE7Oat_2JyGmyyhIc",
+    "position": "Frontend Developer",
+    "avatar_profile": "https://fvqjpplvophvfqedyned.supabase.co/storage/v1/object/sign/Portfolio/images/profiles/avatar-profile.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81ZjJjNzY1NS05NGI1LTRmMGQtOTM1Yy1hNTJjZDQyZjFiMmEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3J0Zm9saW8vaW1hZ2VzL3Byb2ZpbGVzL2F2YXRhci1wcm9maWxlLnBuZyIsImlhdCI6MTc2MTQ3MTU2MiwiZXhwIjoxNzY0MDYzNTYyfQ.WDfw-D1oEdIsNsVId7OW_upUmOUfTVI7oaXMHOnd_Q8",
+    "profile_blurhash": "UIE2@4IUEg%1~Wa}NHjF4.s:-pM|I=aew]kD",
+    "avatar_profile_blurhash": ""
+  },
+  "site_meta": {
+    "title": "Wai Yan Min Aung",
+    "description": "Passionate Frontend Developer"
+  },
+  "experience": [
+    {
+      "logo": "https://fvqjpplvophvfqedyned.supabase.co/storage/v1/object/sign/Portfolio/images/exp/high-ground.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81ZjJjNzY1NS05NGI1LTRmMGQtOTM1Yy1hNTJjZDQyZjFiMmEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3J0Zm9saW8vaW1hZ2VzL2V4cC9oaWdoLWdyb3VuZC5wbmciLCJpYXQiOjE3NjE0NzEyNzEsImV4cCI6MTc2NDA2MzI3MX0.Uqzs3VqLb4aAHlzwv43pYtcqaE2Wm1jUa1W5ea0FMMI",
+      "period": {
+        "to": "Present",
+        "from": "Jan 2024"
+      },
+      "company": "High Ground",
+      "position": "Frontend Developer",
+      "logo_blurhash": ""
+    },
+    {
+      "logo": "https://fvqjpplvophvfqedyned.supabase.co/storage/v1/object/sign/Portfolio/images/exp/telecom-myanmar.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81ZjJjNzY1NS05NGI1LTRmMGQtOTM1Yy1hNTJjZDQyZjFiMmEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3J0Zm9saW8vaW1hZ2VzL2V4cC90ZWxlY29tLW15YW5tYXIucG5nIiwiaWF0IjoxNzYxNDcxNDI0LCJleHAiOjE3NjQwNjM0MjR9._VlQ9XAIvbA69ObIJX72s2GKT9lHHEICk4_CUD9MOGA",
+      "period": {
+        "to": "Dec 2023",
+        "from": "Jan 2023"
+      },
+      "company": "Telecom Myanmar",
+      "position": "React Native Developer",
+      "logo_blurhash": ""
+    },
+    {
+      "logo": "https://fvqjpplvophvfqedyned.supabase.co/storage/v1/object/sign/Portfolio/images/exp/moc.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81ZjJjNzY1NS05NGI1LTRmMGQtOTM1Yy1hNTJjZDQyZjFiMmEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3J0Zm9saW8vaW1hZ2VzL2V4cC9tb2MucG5nIiwiaWF0IjoxNzYxNDcxMzQ1LCJleHAiOjE3NjQwNjMzNDV9.AUZizTI35px9sBmiKQ8myplFTGyjIR73gljkqW6UyUI",
+      "period": {
+        "to": "Dec 2022",
+        "from": "Jan 2022"
+      },
+      "company": "MOC Interactive",
+      "position": "Frontend Developer",
+      "logo_blurhash": ""
+    },
+    {
+      "logo": "https://fvqjpplvophvfqedyned.supabase.co/storage/v1/object/sign/Portfolio/images/exp/mwc.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81ZjJjNzY1NS05NGI1LTRmMGQtOTM1Yy1hNTJjZDQyZjFiMmEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3J0Zm9saW8vaW1hZ2VzL2V4cC9td2MucG5nIiwiaWF0IjoxNzYxNDcxMzY5LCJleHAiOjE3NjQwNjMzNjl9.6xQtsTNFrVg-TKHjk5BMCH1DmBZD6wvazLBXA2RLfDA",
+      "period": {
+        "to": "Sep 2022",
+        "from": "Dec 2020"
+      },
+      "company": "Myanmar Web Creator",
+      "position": "Full Stack Developer",
+      "logo_blurhash": ""
+    },
+    {
+      "logo": "https://fvqjpplvophvfqedyned.supabase.co/storage/v1/object/sign/Portfolio/images/exp/mwd.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81ZjJjNzY1NS05NGI1LTRmMGQtOTM1Yy1hNTJjZDQyZjFiMmEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3J0Zm9saW8vaW1hZ2VzL2V4cC9td2QucG5nIiwiaWF0IjoxNzYxNDcxMzk3LCJleHAiOjE3NjQwNjMzOTd9.TmmkD3-zFgmqoa7olDnF4qnkomdOlZDuGwJI6DjgGgE",
+      "period": {
+        "to": "Nov 2019",
+        "from": "Jun 2017"
+      },
+      "company": "Myanmar Web Designer",
+      "position": "Junior WordPress Developer",
+      "logo_blurhash": ""
+    }
+  ]
+}
