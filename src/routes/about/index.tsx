@@ -106,12 +106,12 @@ function About() {
               >
                 {/*  Hidden on small screens */}
                 <div className="aspect-square bg-white rounded-lg p-2 max-w-14 order-1 md:order-none">
-                  <OptimizedImage
+                  <img
                     src={exp.logo}
-                    alt={exp.company}
-                    width={60}
-                    height={60}
                     className="object-contain h-full w-full"
+                    width={40}
+                    height={40}
+                    alt={exp.company}
                   />
                 </div>
 
@@ -140,7 +140,13 @@ function About() {
                   {skill.skill}
                 </span>
                 <div>
-                  <img src={skill.icon} className="size-10 ms-auto" />
+                  <img
+                    src={skill.icon}
+                    className="size-10 ms-auto"
+                    width={40}
+                    height={40}
+                    alt={skill.skill}
+                  />
                 </div>
               </div>
             ))}
@@ -159,7 +165,13 @@ function About() {
                   {skill.skill}
                 </span>
                 <div>
-                  <img src={skill.icon} className="size-10 ms-auto" />
+                  <img
+                    src={skill.icon}
+                    className="size-10 ms-auto"
+                    width={40}
+                    height={40}
+                    alt={skill.skill}
+                  />
                 </div>
               </div>
             ))}

@@ -1,5 +1,6 @@
 import Button from "@/components/ui/Button";
 import FloatingFooterIcons from "./FloatingFooterIcons";
+import OptimizedImage from "@/components/@shared/OptimizedImage";
 
 const Footer = () => {
   return (
@@ -29,9 +30,11 @@ const Footer = () => {
         <div className="sm:mb-32 mb-20">
           <div className="relative mb-8">
             <div className="rounded-full sm:size-32 size-28 lg:w-36 lg:h-36 mx-auto overflow-hidden bg-white">
-              <img
+              <OptimizedImage
                 src="/images/avatar-profile.png"
                 alt="Wai Yan Min Aung"
+                width={144}
+                height={144}
                 className="w-full h-full object-cover"
               />
             </div>
