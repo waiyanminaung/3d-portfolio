@@ -51,17 +51,26 @@ function Index() {
               <a
                 href={`mailto:${personal.contact.email}`}
                 className="md:text-lg underline font-medium"
+                data-analytics="Email Click"
                 target="_blank"
               >
                 {personal.contact.email}
               </a>
             </div>
             <div className="mt-1 md:text-base text-sm">
-              <a href={personal.social.linkedin} target="_blank">
+              <a
+                href={personal.social.linkedin}
+                target="_blank"
+                data-analytics="LinkedIn Visit"
+              >
                 LinkedIn
               </a>
               ,{" "}
-              <a href={personal.social.github} target="_blank">
+              <a
+                href={personal.social.github}
+                target="_blank"
+                data-analytics="GitHub Visit"
+              >
                 GitHub
               </a>
             </div>
