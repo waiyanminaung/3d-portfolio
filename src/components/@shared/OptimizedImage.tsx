@@ -1,13 +1,11 @@
 import { cn } from "@/utils";
 import { useState } from "react";
-import {
-  LazyLoadImage,
-  type LazyLoadImageProps,
-} from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
 import { Blurhash } from "react-blurhash";
 
-interface OptimizedImageProps extends LazyLoadImageProps {
+interface OptimizedImageProps
+  extends React.ImgHTMLAttributes<HTMLImageElement> {
+  src: string;
+  alt: string;
   blurHash?: {
     hash: string;
     resolutionX?: number;
@@ -20,6 +18,7 @@ const OptimizedImage = ({
   src,
   alt,
   blurHash,
+  className,
   ...props
 }: OptimizedImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -35,24 +34,24 @@ const OptimizedImage = ({
           width="100%"
           height="100%"
           className={cn(
-            props.className,
+            className,
             "!absolute inset-0 transition-opacity duration-500 overflow-hidden",
             isLoaded ? "opacity-0" : "opacity-100"
           )}
         />
       )}
-      <LazyLoadImage
+      <img
         src={src}
         alt={alt}
-        afterLoad={() => setIsLoaded(true)}
-        effect="opacity"
-        {...props}
+        onLoad={() => setIsLoaded(true)}
         width={props.width}
         height={props.height}
-        wrapperClassName={cn(
-          "filter transition-all duration-300 ease-out",
-          isLoaded ? "filter-none" : "blur-lg"
+        className={cn(
+          "overflow-hidden filter transition-all duration-300 ease-out",
+          isLoaded ? "filter-none" : "blur-lg",
+          className
         )}
+        {...props}
       />
     </div>
   );
