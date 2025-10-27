@@ -58,7 +58,7 @@ const Footer = () => {
             reality with precision and passion.
           </p>
 
-          <Button variant="outline" asChild>
+          <Button variant="outline" asChild data-analytics="Download Resume">
             <a
               href="https://drive.google.com/file/d/1-Kb2gs8ylT1lCNX3gTIVZuS1tVjDBm8F/view?usp=sharing"
               target="_blank"
@@ -71,6 +71,8 @@ const Footer = () => {
         <div className="flex justify-center gap-6 lg:gap-8 mb-8">
           <a
             href={personal.social.linkedin}
+            data-analytics="LinkedIn Visit"
+            target="_blank"
             className="bg-gray-50 sm:w-20 sm:h-8 size-10 lg:w-24 lg:h-10 rounded flex items-center justify-center hover:bg-gray-200 transition-colors"
           >
             <span className="text-xs lg:text-sm font-medium text-gray-700 sm:inline-block hidden">
@@ -92,6 +94,7 @@ const Footer = () => {
           </a>
           <a
             href={personal.social.whatsapp}
+            data-analytics="WhatsApp Chat"
             target="_blank"
             className="bg-gray-50 sm:w-20 sm:h-8 size-10 lg:w-24 lg:h-10 rounded flex items-center justify-center hover:bg-gray-200 transition-colors"
           >
@@ -114,6 +117,7 @@ const Footer = () => {
           </a>
           <a
             href={`tel:${personal.contact.phone}`}
+            data-analytics="Phone Call"
             target="_blank"
             className="bg-gray-50 sm:w-20 sm:h-8 size-10 lg:w-24 lg:h-10 rounded flex items-center justify-center hover:bg-gray-200 transition-colors"
           >
@@ -142,6 +146,7 @@ const Footer = () => {
           </a>
           <a
             href={`mailto:${personal.contact.email}`}
+            data-analytics="Email Click"
             target="_blank"
             className="bg-gray-50 sm:w-20 sm:h-8 size-10 lg:w-24 lg:h-10 rounded flex items-center justify-center hover:bg-gray-200 transition-colors"
           >

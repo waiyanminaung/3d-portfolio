@@ -58,7 +58,12 @@ const RootLayout = () => {
           ))}
         </div>
         <div className="flex">
-          <Button variant="outline" className="ms-auto" asChild>
+          <Button
+            variant="outline"
+            className="ms-auto"
+            asChild
+            data-analytics="Download Resume"
+          >
             <a
               href="https://drive.google.com/file/d/1-Kb2gs8ylT1lCNX3gTIVZuS1tVjDBm8F/view?usp=sharing"
               target="_blank"

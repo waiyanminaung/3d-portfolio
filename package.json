@@ -22,6 +22,7 @@
     "blurhash": "^2.0.5",
     "class-variance-authority": "^0.7.1",
     "gsap": "^3.13.0",
+    "mixpanel-browser": "^2.71.0",
     "react": "^19.1.1",
     "react-blurhash": "^0.3.0",
     "react-dom": "^19.1.1",
