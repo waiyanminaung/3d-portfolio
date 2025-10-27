@@ -1,4 +1,5 @@
 import { HomeScence } from "@/components/3d/scence";
+import useUser from "@/hooks/useUser";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
@@ -6,6 +7,18 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const { data, error, loading } = useUser();
+
+  if (loading) {
+    return <div className="text-white">Loading...</div>;
+  }
+
+  if (error || !data) {
+    return <div className="text-red-500">Error: {error}</div>;
+  }
+
+  const { personal } = data;
+
   return (
     <>
       <div className="h-screen bg-gradient-to-r from-[#282727]  to-[#0C0C0E]">
@@ -36,14 +49,21 @@ function Index() {
             </div>
             <div className="mt-2">
               <a
-                href="mailto:info.wyma@gmail.com"
+                href={`mailto:${personal.contact.email}`}
                 className="md:text-lg underline font-medium"
+                target="_blank"
               >
-                info.wyma@gmail.com
+                {personal.contact.email}
               </a>
             </div>
             <div className="mt-1 md:text-base text-sm">
-              <a href="">LinkedIn</a>, <a href="">GitHub</a>
+              <a href={personal.social.linkedin} target="_blank">
+                LinkedIn
+              </a>
+              ,{" "}
+              <a href={personal.social.github} target="_blank">
+                GitHub
+              </a>
             </div>
           </div>
         </div>

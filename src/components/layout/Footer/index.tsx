@@ -1,8 +1,21 @@
 import Button from "@/components/ui/Button";
 import FloatingFooterIcons from "./FloatingFooterIcons";
 import OptimizedImage from "@/components/@shared/OptimizedImage";
+import useUser from "@/hooks/useUser";
 
 const Footer = () => {
+  const { data, error, loading } = useUser();
+
+  if (loading) {
+    return <div className="text-white">Loading...</div>;
+  }
+
+  if (error || !data) {
+    return <div className="text-red-500">Error: {error}</div>;
+  }
+
+  const { personal } = data;
+
   return (
     <div className="relative bg-transparent flex items-center justify-center overflow-hidden pb-20 pt-36">
       <div className="lg:block hidden absolute container">
@@ -57,7 +70,7 @@ const Footer = () => {
 
         <div className="flex justify-center gap-6 lg:gap-8 mb-8">
           <a
-            href="#"
+            href={personal.social.linkedin}
             className="bg-gray-50 sm:w-20 sm:h-8 size-10 lg:w-24 lg:h-10 rounded flex items-center justify-center hover:bg-gray-200 transition-colors"
           >
             <span className="text-xs lg:text-sm font-medium text-gray-700 sm:inline-block hidden">
@@ -78,7 +91,8 @@ const Footer = () => {
             </svg>
           </a>
           <a
-            href="#"
+            href={personal.social.whatsapp}
+            target="_blank"
             className="bg-gray-50 sm:w-20 sm:h-8 size-10 lg:w-24 lg:h-10 rounded flex items-center justify-center hover:bg-gray-200 transition-colors"
           >
             <span className="text-xs lg:text-sm font-medium text-gray-700 sm:inline-block hidden">
@@ -99,7 +113,8 @@ const Footer = () => {
             </svg>
           </a>
           <a
-            href="#"
+            href={`tel:${personal.contact.phone}`}
+            target="_blank"
             className="bg-gray-50 sm:w-20 sm:h-8 size-10 lg:w-24 lg:h-10 rounded flex items-center justify-center hover:bg-gray-200 transition-colors"
           >
             <span className="text-xs lg:text-sm font-medium text-gray-700 sm:inline-block hidden">
@@ -126,7 +141,8 @@ const Footer = () => {
             </svg>
           </a>
           <a
-            href="#"
+            href={`mailto:${personal.contact.email}`}
+            target="_blank"
             className="bg-gray-50 sm:w-20 sm:h-8 size-10 lg:w-24 lg:h-10 rounded flex items-center justify-center hover:bg-gray-200 transition-colors"
           >
             <span className="text-xs lg:text-sm font-medium text-gray-700 sm:inline-block hidden">

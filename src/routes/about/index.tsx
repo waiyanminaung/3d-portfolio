@@ -25,7 +25,11 @@ const devopsSkills = [
 ];
 
 function About() {
-  const { data, error } = useUser();
+  const { data, error, loading } = useUser();
+
+  if (loading) {
+    return <div className="text-white">Loading...</div>;
+  }
 
   if (error || !data) {
     return <div className="text-red-500">Error: {error}</div>;
