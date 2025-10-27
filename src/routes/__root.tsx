@@ -37,7 +37,7 @@ const RootLayout = () => {
     <div id="smooth-content">
       <div className="grid lg:grid-cols-[20%_1fr_20%] grid-cols-[1fr_auto_auto] container mx-auto fixed md:top-10 top-8 justify-between left-0 right-0 z-10 items-center gap-6">
         <div className="text-white font-bold text-lg">
-          <Link to="/">
+          <Link to="/" viewTransition>
             <span className="md:block hidden">Wai Yan Min Aung</span>{" "}
             <span className="md:hidden">W</span>
           </Link>
@@ -51,6 +51,7 @@ const RootLayout = () => {
                 "text-gray-300 hover:text-white transition-colors font-medium",
                 menu.isActive && "text-white "
               )}
+              viewTransition={{ types: ["slide-up"] }}
             >
               {menu.name}
             </Link>
