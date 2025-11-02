@@ -1,6 +1,7 @@
 import { HomeScence } from "@/components/3d/scence";
 import useUser from "@/hooks/useUser";
 import { createFileRoute } from "@tanstack/react-router";
+import DecryptedText from "./-components/DecryptedText";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -31,11 +32,15 @@ function Index() {
       <div className="fixed top-2/4 w-full container left-0 right-0 mx-auto md:-translate-y-2/4 -translate-y-2/3 text-white">
         <div className="grid md:grid-cols-[40%_1fr_30%] items-end md:gap-0 gap-6">
           <div className="text-left">
-            <h1 className="md:text-6xl text-4xl font-semibold uppercase mb-5">
-              Frontend
-              <br />
-              Developer
-            </h1>
+            <DecryptedText
+              text="Frontend Developer"
+              animateOn="view"
+              parentClassName="mb-5"
+              className="md:text-6xl text-4xl font-semibold uppercase"
+              encryptedClassName="md:text-6xl text-4xl font-semibold uppercase"
+              speed={100}
+              sequential={true}
+            />
             <p className="md:text-lg text-sm md:max-w-[380px]  font-light">
               I'm experienced in Web Development and have a passion for crafting
               digital experiences.
