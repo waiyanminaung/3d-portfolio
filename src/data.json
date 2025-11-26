@@ -19,7 +19,7 @@
       "email": "info.wyma@gmail.com",
       "phone": "+66971258531"
     },
-    "profile": "https://fvqjpplvophvfqedyned.supabase.co/storage/v1/object/sign/Portfolio/images/profiles/standard-profile.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81ZjJjNzY1NS05NGI1LTRmMGQtOTM1Yy1hNTJjZDQyZjFiMmEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3J0Zm9saW8vaW1hZ2VzL3Byb2ZpbGVzL3N0YW5kYXJkLXByb2ZpbGUucG5nIiwiaWF0IjoxNzYxNDcxNTMxLCJleHAiOjE3NjQwNjM1MzF9.i2OQvAJbiAKIQP3hOaeGrud8K6kE7Oat_2JyGmyyhIc",
+    "profile": "https://fvqjpplvophvfqedyned.supabase.co/storage/v1/object/sign/Portfolio/images/profiles/standard-profile.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81ZjJjNzY1NS05NGI1LTRmMGQtOTM1Yy1hNTJjZDQyZjFiMmEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3J0Zm9saW8vaW1hZ2VzL3Byb2ZpbGVzL3N0YW5kYXJkLXByb2ZpbGUucG5nIiwiaWF0IjoxNzY0MTcwMDU2LCJleHAiOjE3OTU3MDYwNTZ9.WPge2XT6nZqo_finw25zbQ-9PklBqMt9jVhUllR3iYM",
     "position": "Frontend Developer",
     "avatar_profile": "https://fvqjpplvophvfqedyned.supabase.co/storage/v1/object/sign/Portfolio/images/profiles/avatar-profile.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81ZjJjNzY1NS05NGI1LTRmMGQtOTM1Yy1hNTJjZDQyZjFiMmEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3J0Zm9saW8vaW1hZ2VzL3Byb2ZpbGVzL2F2YXRhci1wcm9maWxlLnBuZyIsImlhdCI6MTc2MTQ3MTU2MiwiZXhwIjoxNzY0MDYzNTYyfQ.WDfw-D1oEdIsNsVId7OW_upUmOUfTVI7oaXMHOnd_Q8",
     "profile_blurhash": "UIE2@4IUEg%1~Wa}NHjF4.s:-pM|I=aew]kD",
@@ -31,7 +31,7 @@
   },
   "experience": [
     {
-      "logo": "https://fvqjpplvophvfqedyned.supabase.co/storage/v1/object/sign/Portfolio/images/exp/high-ground.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81ZjJjNzY1NS05NGI1LTRmMGQtOTM1Yy1hNTJjZDQyZjFiMmEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3J0Zm9saW8vaW1hZ2VzL2V4cC9oaWdoLWdyb3VuZC5wbmciLCJpYXQiOjE3NjE0NzEyNzEsImV4cCI6MTc2NDA2MzI3MX0.Uqzs3VqLb4aAHlzwv43pYtcqaE2Wm1jUa1W5ea0FMMI",
+      "logo": "https://fvqjpplvophvfqedyned.supabase.co/storage/v1/object/sign/Portfolio/images/exp/high-ground.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81ZjJjNzY1NS05NGI1LTRmMGQtOTM1Yy1hNTJjZDQyZjFiMmEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3J0Zm9saW8vaW1hZ2VzL2V4cC9oaWdoLWdyb3VuZC5wbmciLCJpYXQiOjE3NjQxNzAwODIsImV4cCI6MTc5NTcwNjA4Mn0.cc8qMwNngrdZGiFG93HxmsI485sSEOh7L5EFGG0cg2Q",
       "period": {
         "to": "Present",
         "from": "Jan 2024"
@@ -41,7 +41,7 @@
       "logo_blurhash": ""
     },
     {
-      "logo": "https://fvqjpplvophvfqedyned.supabase.co/storage/v1/object/sign/Portfolio/images/exp/telecom-myanmar.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81ZjJjNzY1NS05NGI1LTRmMGQtOTM1Yy1hNTJjZDQyZjFiMmEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3J0Zm9saW8vaW1hZ2VzL2V4cC90ZWxlY29tLW15YW5tYXIucG5nIiwiaWF0IjoxNzYxNDcxNDI0LCJleHAiOjE3NjQwNjM0MjR9._VlQ9XAIvbA69ObIJX72s2GKT9lHHEICk4_CUD9MOGA",
+      "logo": "https://fvqjpplvophvfqedyned.supabase.co/storage/v1/object/sign/Portfolio/images/exp/telecom-myanmar.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81ZjJjNzY1NS05NGI1LTRmMGQtOTM1Yy1hNTJjZDQyZjFiMmEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3J0Zm9saW8vaW1hZ2VzL2V4cC90ZWxlY29tLW15YW5tYXIucG5nIiwiaWF0IjoxNzY0MTcwMTMyLCJleHAiOjE3OTU3MDYxMzJ9.GOsbAf9kCzByWDBdnvw7tewl2ZWU3265hQQ_5fuVKnk",
       "period": {
         "to": "Dec 2023",
         "from": "Jan 2023"
@@ -51,7 +51,7 @@
       "logo_blurhash": ""
     },
     {
-      "logo": "https://fvqjpplvophvfqedyned.supabase.co/storage/v1/object/sign/Portfolio/images/exp/moc.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81ZjJjNzY1NS05NGI1LTRmMGQtOTM1Yy1hNTJjZDQyZjFiMmEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3J0Zm9saW8vaW1hZ2VzL2V4cC9tb2MucG5nIiwiaWF0IjoxNzYxNDcxMzQ1LCJleHAiOjE3NjQwNjMzNDV9.AUZizTI35px9sBmiKQ8myplFTGyjIR73gljkqW6UyUI",
+      "logo": "https://fvqjpplvophvfqedyned.supabase.co/storage/v1/object/sign/Portfolio/images/exp/moc.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81ZjJjNzY1NS05NGI1LTRmMGQtOTM1Yy1hNTJjZDQyZjFiMmEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3J0Zm9saW8vaW1hZ2VzL2V4cC9tb2MucG5nIiwiaWF0IjoxNzY0MTcwMDk5LCJleHAiOjE3OTU3MDYwOTl9.q4GMcqsRjrBv3ZaVJtFm_769dBTWvEdj3dBPcTaGHRE",
       "period": {
         "to": "Dec 2022",
         "from": "Jan 2022"
@@ -61,7 +61,7 @@
       "logo_blurhash": ""
     },
     {
-      "logo": "https://fvqjpplvophvfqedyned.supabase.co/storage/v1/object/sign/Portfolio/images/exp/mwc.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81ZjJjNzY1NS05NGI1LTRmMGQtOTM1Yy1hNTJjZDQyZjFiMmEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3J0Zm9saW8vaW1hZ2VzL2V4cC9td2MucG5nIiwiaWF0IjoxNzYxNDcxMzY5LCJleHAiOjE3NjQwNjMzNjl9.6xQtsTNFrVg-TKHjk5BMCH1DmBZD6wvazLBXA2RLfDA",
+      "logo": "https://fvqjpplvophvfqedyned.supabase.co/storage/v1/object/sign/Portfolio/images/exp/mwc.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81ZjJjNzY1NS05NGI1LTRmMGQtOTM1Yy1hNTJjZDQyZjFiMmEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3J0Zm9saW8vaW1hZ2VzL2V4cC9td2MucG5nIiwiaWF0IjoxNzY0MTcwMTEyLCJleHAiOjE3OTU3MDYxMTJ9.NuMgg8ZOpOwSg3QcHHkzmNlUNXPkV6ieNpqkIw5ljmw",
       "period": {
         "to": "Sep 2022",
         "from": "Dec 2020"
@@ -71,7 +71,7 @@
       "logo_blurhash": ""
     },
     {
-      "logo": "https://fvqjpplvophvfqedyned.supabase.co/storage/v1/object/sign/Portfolio/images/exp/mwd.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81ZjJjNzY1NS05NGI1LTRmMGQtOTM1Yy1hNTJjZDQyZjFiMmEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3J0Zm9saW8vaW1hZ2VzL2V4cC9td2QucG5nIiwiaWF0IjoxNzYxNDcxMzk3LCJleHAiOjE3NjQwNjMzOTd9.TmmkD3-zFgmqoa7olDnF4qnkomdOlZDuGwJI6DjgGgE",
+      "logo": "https://fvqjpplvophvfqedyned.supabase.co/storage/v1/object/sign/Portfolio/images/exp/mwd.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81ZjJjNzY1NS05NGI1LTRmMGQtOTM1Yy1hNTJjZDQyZjFiMmEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQb3J0Zm9saW8vaW1hZ2VzL2V4cC9td2QucG5nIiwiaWF0IjoxNzY0MTcwMTIyLCJleHAiOjE3OTU3MDYxMjJ9.R1-v1tEF9HlskZmF6JL0untMCr64XhLRUx2U-aDPqD8",
       "period": {
         "to": "Nov 2019",
         "from": "Jun 2017"
