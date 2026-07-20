@@ -60,7 +60,7 @@ const Footer = () => {
 
           <Button variant="outline" asChild data-analytics="Download Resume">
             <a
-              href="https://drive.google.com/file/d/1-Kb2gs8ylT1lCNX3gTIVZuS1tVjDBm8F/view?usp=sharing"
+              href="https://drive.google.com/file/d/1dHex4mn8qPhK_4nMDhnB0QsdgRRK7RDB/view?usp=sharing"
               target="_blank"
             >
               Download Resume
