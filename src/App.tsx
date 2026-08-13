@@ -18,7 +18,9 @@ declare module "@tanstack/react-router" {
 
 function App() {
   useAnalytics({
+    router,
     mixpanelToken: import.meta.env.VITE_MIXPANEL_TOKEN,
+    gaMeasurementId: import.meta.env.VITE_GA_MEASUREMENT_ID,
     trackPageViews: true,
     enableAutoTracking: true,
   });

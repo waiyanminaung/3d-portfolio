@@ -1,6 +1,13 @@
 import type { AnalyticsEvent, AnalyticsProperties } from "@/types/mixpanel";
 import mixpanel from "mixpanel-browser";
 
+declare global {
+  interface Window {
+    dataLayer: unknown[];
+    gtag: (...args: unknown[]) => void;
+  }
+}
+
 export const initMixpanel = (
   token: string,
   options?: Record<string, unknown>
@@ -9,6 +16,42 @@ export const initMixpanel = (
     debug: import.meta.env.DEV,
     track_pageview: true,
     ...options,
+  });
+};
+
+let gaInitialized = false;
+
+export const initGoogleAnalytics = (measurementId: string) => {
+  if (gaInitialized || !measurementId) return;
+
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function gtag(...args: unknown[]) {
+    window.dataLayer.push(args);
+  };
+
+  window.gtag("js", new Date());
+  window.gtag("config", measurementId, {
+    send_page_view: false,
+  });
+
+  gaInitialized = true;
+
+  if (import.meta.env.DEV) console.log("📊 Google Analytics initialized");
+};
+
+export const trackPageView = (path: string, measurementId: string) => {
+  if (!gaInitialized || typeof window.gtag !== "function") return;
+
+  window.gtag("event", "page_view", {
+    page_path: path,
+    page_location: window.location.href,
+    page_title: document.title,
+    send_to: measurementId,
   });
 };
 
@@ -27,6 +70,13 @@ export const trackEvent = (
       ...defaultProperties,
       ...properties,
     });
+
+    if (gaInitialized && typeof window.gtag === "function") {
+      window.gtag("event", eventName, {
+        ...defaultProperties,
+        ...properties,
+      });
+    }
 
     if (import.meta.env.DEV) {
       console.log("📊 Analytics Event:", eventName, {
