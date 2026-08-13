@@ -2,6 +2,7 @@ import Button from "@/components/ui/Button";
 import FloatingFooterIcons from "./FloatingFooterIcons";
 import OptimizedImage from "@/components/@shared/OptimizedImage";
 import useUser from "@/hooks/useUser";
+import { RESUME_URL, trackResumeDownload } from "@/utils/analytics";
 
 const Footer = () => {
   const { data, error, loading } = useUser();
@@ -60,8 +61,9 @@ const Footer = () => {
 
           <Button variant="outline" asChild data-analytics="Download Resume">
             <a
-              href="https://drive.google.com/file/d/1dHex4mn8qPhK_4nMDhnB0QsdgRRK7RDB/view?usp=sharing"
+              href={RESUME_URL}
               target="_blank"
+              onClick={() => trackResumeDownload("footer")}
             >
               Download Resume
             </a>

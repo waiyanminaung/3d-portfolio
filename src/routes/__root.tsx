@@ -1,5 +1,6 @@
 import Button from "@/components/ui/Button";
 import { cn } from "@/utils";
+import { RESUME_URL, trackResumeDownload } from "@/utils/analytics";
 import { useGSAP } from "@gsap/react";
 import {
   createRootRoute,
@@ -65,8 +66,9 @@ const RootLayout = () => {
             data-analytics="Download Resume"
           >
             <a
-              href="https://drive.google.com/file/d/1dHex4mn8qPhK_4nMDhnB0QsdgRRK7RDB/view?usp=sharing"
+              href={RESUME_URL}
               target="_blank"
+              onClick={() => trackResumeDownload("header")}
             >
               <span className="md:inline-block hidden">Download</span>
               <svg

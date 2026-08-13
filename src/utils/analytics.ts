@@ -55,6 +55,35 @@ export const trackPageView = (path: string, measurementId: string) => {
   });
 };
 
+export const trackConversion = (
+  eventName: string,
+  properties?: Record<string, unknown>
+) => {
+  if (!gaInitialized || typeof window.gtag !== "function") return;
+
+  window.gtag("event", eventName, {
+    page_url: window.location.href,
+    timestamp: new Date().toISOString(),
+    ...properties,
+  });
+
+  if (import.meta.env.DEV) {
+    console.log("🎯 GA Conversion Event:", eventName, properties);
+  }
+};
+
+export const RESUME_URL =
+  "https://drive.google.com/file/d/1dHex4mn8qPhK_4nMDhnB0QsdgRRK7RDB/view?usp=sharing";
+
+export const trackResumeDownload = (source: "header" | "footer") => {
+  trackConversion("resume_download", {
+    campaign_name: "resume_download",
+    content_type: "resume",
+    link_url: RESUME_URL,
+    source,
+  });
+};
+
 export const trackEvent = (
   eventName: AnalyticsEvent,
   properties?: AnalyticsProperties
