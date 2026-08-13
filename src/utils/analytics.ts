@@ -24,6 +24,13 @@ let gaInitialized = false;
 export const initGoogleAnalytics = (measurementId: string) => {
   if (gaInitialized || !measurementId) return;
 
+  if (typeof window.gtag === "function") {
+    gaInitialized = true;
+    if (import.meta.env.DEV)
+      console.log("📊 Google Analytics already initialized via index.html");
+    return;
+  }
+
   const script = document.createElement("script");
   script.async = true;
   script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
