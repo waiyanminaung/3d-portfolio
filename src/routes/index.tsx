@@ -89,18 +89,19 @@ function Index() {
           className="pointer-events-none absolute inset-0 [background-size:200px_200px] select-none [background-image:linear-gradient(to_right,#2C2C2C_1px,transparent_1px)]"
         />
         {/*
-          The WebGL canvas stops short of the hero's bottom edge (bottom-10) and
-          is never moved past it: where a clip edge cuts the canvas, Chrome can
-          leak a 1px row of it at subpixel scroll offsets from ScrollSmoother.
-          The fade below fully covers the canvas's own bottom edge instead.
+          The WebGL canvas keeps the full hero height (so the avatar keeps its
+          size) but is lifted 40px, so its bottom stops short of the hero's
+          bottom edge. Where a clip edge cuts the canvas, Chrome can leak a 1px
+          row of it at ScrollSmoother's subpixel offsets; the top edge it now
+          crosses is empty space. The fade below covers the canvas's bottom.
         */}
         <div
           data-hero-avatar
-          className="absolute inset-x-0 top-0 bottom-10 md:pt-0 pt-[30%]"
+          className="absolute inset-x-0 -top-10 h-full md:pt-0 pt-[30%]"
         >
           <HomeScence />
         </div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-b from-transparent to-[#1d1d1d] to-60%" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-b from-transparent to-[#1d1d1d] to-70%" />
 
         <div className="absolute top-2/4 w-full container left-0 right-0 mx-auto md:-translate-y-2/4 -translate-y-2/3 text-white">
           <div className="grid md:grid-cols-[40%_1fr_30%] items-end md:gap-0 gap-6">
