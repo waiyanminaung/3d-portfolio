@@ -57,7 +57,9 @@ const SelectedProjects = () => {
     () => {
       const mm = gsap.matchMedia();
 
-      requestAnimationFrame(() => {
+      // Wait a frame for layout. Cancel it on cleanup: React StrictMode runs
+      // this effect twice, and a stray frame would add a second set of pins.
+      const frame = requestAnimationFrame(() => {
         mm.add("(min-width: 1025px)", () => {
           setupScrollTrigger("top 15%", "bottom 85%");
         });
@@ -70,9 +72,12 @@ const SelectedProjects = () => {
       function setupScrollTrigger(start: string, end: string) {
         if (!container.current) return;
 
-        ScrollTrigger.getAll().forEach((t) => t.kill());
-
-        const sections = gsap.utils.toArray<HTMLElement>(".project-item");
+        // matchMedia reverts its own triggers on breakpoint change; don't kill
+        // ScrollTrigger.getAll() here, it would wipe other sections' triggers.
+        const sections = gsap.utils.toArray<HTMLElement>(
+          ".project-item",
+          container.current
+        );
         if (!sections.length) return;
 
         sections.forEach((element) => {
@@ -120,6 +125,7 @@ const SelectedProjects = () => {
       }
 
       return () => {
+        cancelAnimationFrame(frame);
         mm.revert();
       };
     },

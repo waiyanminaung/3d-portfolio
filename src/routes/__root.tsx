@@ -1,6 +1,7 @@
 import Button from "@/components/ui/Button";
 import { cn } from "@/utils";
 import { RESUME_URL, trackResumeDownload } from "@/utils/analytics";
+import { scrollToAbout } from "@/utils/scroll";
 import { useGSAP } from "@gsap/react";
 import {
   createRootRoute,
@@ -17,6 +18,7 @@ gsap.registerPlugin(useGSAP, ScrollSmoother, ScrollTrigger);
 const RootLayout = () => {
   const location = useLocation();
   const currentPathname = location.pathname;
+  const isHome = currentPathname === "/";
 
   useGSAP(() => {
     ScrollSmoother.create({
@@ -26,13 +28,18 @@ const RootLayout = () => {
   });
 
   const menus = [
-    { name: "About", to: "/about", isActive: currentPathname === "/about" },
+    {
+      name: "About",
+      to: "/",
+      hash: "about",
+      isActive: isHome && location.hash === "about",
+    },
     {
       name: "Work",
       to: "/projects",
       isActive: currentPathname === "/projects",
     },
-  ];
+  ] as const;
 
   return (
     <div id="smooth-content">
@@ -48,11 +55,18 @@ const RootLayout = () => {
             <Link
               key={menu.name}
               to={menu.to}
+              hash={"hash" in menu ? menu.hash : undefined}
+              onClick={() => {
+                // Already on home: the hash may not change, so scroll ourselves.
+                if (isHome && "hash" in menu) scrollToAbout();
+              }}
               className={cn(
                 "text-gray-300 hover:text-white transition-colors font-medium",
                 menu.isActive && "text-white "
               )}
-              viewTransition={{ types: ["slide-up"] }}
+              viewTransition={
+                isHome && "hash" in menu ? false : { types: ["slide-up"] }
+              }
             >
               {menu.name}
             </Link>
